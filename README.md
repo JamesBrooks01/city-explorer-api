@@ -29,11 +29,6 @@ This app uses Node, and Express at base; and uses the libraries of DotENV, Cors,
 - Cole Gibbs (Day02 WRRC Partner)
   - [LinkedIn](https://www.linkedin.com/in/cole-gibbs/)
 
-## Additonal Information
-
-- Day 02:
-  - ![Day02 WRRC Image](./src/imgs/Lab%2007%20WRRC.png)
-
 ## Time Estimation
 
 >Name of feature: Set up Server Repository
