@@ -26,8 +26,17 @@ This app uses Node, and Express at base; and uses the libraries of DotENV, Cors,
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+- Liesl White (Day01 WRRC Partner)
+  - [LinkedIn](https://www.linkedin.com/in/lieslwhite/)
 - Cole Gibbs (Day02 WRRC Partner)
   - [LinkedIn](https://www.linkedin.com/in/cole-gibbs/)
+
+## Additional Information
+
+- Day 01:
+  - ![Day01 WRRC Image](./data/imgs/WRCC%20Lab%2006.png)
+- Day 02:
+  - ![Day02 WRRC Image](./data/imgs/Lab%2007%20WRRC.png)
 
 ## Time Estimation
 
