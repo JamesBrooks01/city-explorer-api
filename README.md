@@ -25,6 +25,7 @@ This app uses Node, and Express at base; and uses the libraries of DotENV, Cors,
 - 03-22-2022 5:30pm - Added functionality to API server
 - 03-23-2022 6:21pm - Made weather data live
 - 03-23-2022 8:20pm - Made movie data live
+- 03-23-2022 10:02pm - Deployed
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
@@ -85,3 +86,13 @@ This app uses Node, and Express at base; and uses the libraries of DotENV, Cors,
 >Finish time: 8:20pm
 >
 >Actual time needed to complete: 50 Minutes
+
+>Name of feature: Deploy
+>
+>Estimate of time needed to complete: 5 Minutes
+>
+>Start time: 9:31pm
+>
+>Finish time: 10:02pm
+>
+>Actual time needed to complete: 31 Minutes
