@@ -29,7 +29,7 @@ app.get('/weather', async (req, res) => {
   try {
     let lat = req.query.lat;
     let lon = req.query.lon;
-    let url = `http://api.weatherbit.io/v2.0/forecast/daily?key=${process.env.WEATHER_API_KEY}&days=3&lat=${lat}&lon=${lon}`;
+    let url = `https://api.weatherbit.io/v2.0/forecast/daily?key=${process.env.WEATHER_API_KEY}&days=3&lat=${lat}&lon=${lon}`;
     let weatherDataGotten = await axios.get(url);
     let cityObject = weatherDataGotten.data;
     let cityArray = [];
