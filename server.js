@@ -8,6 +8,7 @@ require('dotenv').config();
 const cors = require('cors');
 const getMovies = require('./modules/movies');
 const getWeather = require('./modules/weather');
+const getLocation = require('./modules/location');
 
 //USE
 // ONCE SOMETHING IS REQUIRED WE USE IT. THIS IS WEHERE WE ASSIGN THE REQUIRED FIELD A VARIABLE. REACT DOES IT IN ONE STEP WITH IMPORT AND EXPRESS DOES IT IN TWO WITH 'REQUIRE' AND 'USE'
@@ -26,8 +27,8 @@ app.get('/', (requestObject, responseObject) => {
   responseObject.send('breaking through to the other side!');
 });
 
+app.get('/location', getLocation);
 app.get('/weather', getWeather);
-
 app.get('/movies', getMovies);
 
 
