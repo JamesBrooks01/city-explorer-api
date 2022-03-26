@@ -1,11 +1,11 @@
 # City Explorer API
 
 **Author**: James Brooks
-**Version**: 3.1.0
+**Version**: 4.1.0
 
 ## Overview
 
-This API draws data from three different APIs to provide data based upon a city in the US. It draws from the LocationIQ API to get location data based on a U.S City Name, with the top result being returned. It next draws from the WeatherBit API to provide a 3 day weather forcast based upon Latitude and Logitude. And finally, it draws from the MovieDB API to return a list of movies with a search query in the title. The problem domain for this API is to aid in the desire for information and curisoity.
+This API draws data from three different APIs to provide data based upon a city in the US. It draws from the LocationIQ API to get location data based on a U.S City Name, with the top result being returned. It next draws from the WeatherBit API to provide a 3 day weather forcast based upon Latitude and Logitude. And finally, it draws from the MovieDB API to return a list of movies with a search query in the title. The problem domain for this API is to aid in the desire for information and curisoity. It also has stores a cache of information to reduce the number of API calls it uses.
 
 ## Getting Started
 
@@ -27,6 +27,10 @@ This app uses Node, and Express at base; and uses the libraries of DotENV, Cors,
 - 03-24-2022 3:20pm - Started Refactoring.
 - 03-24-2022 4:13pm - Modularized Movie and Weather API Calls.
 - 03-24-2022 6:06pm - Added WeatherIQ to server API.
+- 03-25-2022 5:15pm - Started implementing Cache Code.
+- 03-25-2022 6:02pm - Implemented Cache code into Weather.js
+- 03-25-2022 6:33pm - Implemented Cache code into Movies.js
+- 03-25-2022 6:49pm - Implemented Cache code into Location.js
 
 ## Credit and Collaborations
 
@@ -38,6 +42,8 @@ This app uses Node, and Express at base; and uses the libraries of DotENV, Cors,
   - [Linkedin](https://www.linkedin.com/in/taneshabrester/)
 - Dwight Lindquist (Day04 WRRC Partner)
   - [LinkedIn](https://www.linkedin.com/in/dwight-lindquist-a9a0b6b4/)
+- Eden Brekke (Day05 WRRC Partner)
+  - [LinkedIn](https://www.linkedin.com/in/eden-brekke/)
 
 ## Additional Information
 
@@ -48,7 +54,9 @@ This app uses Node, and Express at base; and uses the libraries of DotENV, Cors,
 - Day 03:
   - ![Day03 WRRC Image](./data/imgs/Lab!08%20WRRC.png)
 - Day 04:
-  - ![Day04 WRRC Image](./data/imgs/Lab09%20WRRC.png)
+  - ![Day04 WRRC Image](./src/imgs/Lab09%20WRRC.png)
+- Day 05:
+  - ![Day05 WRRC Image](./data/imgs/25March2022_WRRC_withJames.png)
 
 ## Time Estimation
 
@@ -102,12 +110,12 @@ This app uses Node, and Express at base; and uses the libraries of DotENV, Cors,
 >
 >Actual time needed to complete: 31 Minutes
 
->Name of feature: Modularize The Back-End
+>Name of feature: Use Starter Code to Implement a Cache into the server.
 >
->Estimate of time needed to complete: 1 Hour
+>Estimate of time needed to complete: 2 Hours
 >
->Start time: 3:20pm
+>Start time: 5:15pm
 >
->Finish time: 4:13pm
+>Finish time: 6:49pm
 >
->Actual time needed to complete: 53 Minutes
+>Actual time needed to complete: 1 Hour 34 Minutes

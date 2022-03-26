@@ -1,21 +1,31 @@
 const axios = require('axios');
+let cache = require('./cache.js');
+module.exports = getMovies;
 
-async function getMovies(req, res) {
-  let keyword = req.query.keyword;
-  let url = 'https://api.themoviedb.org/3/search/movie';
-  let params = {
-    api_key: process.env.MOVIE_API_KEY,
-    query: keyword,
-  };
+function getMovies(keyword){
+  const key = 'Movie-' + keyword;
+  const url = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.MOVIE_API_KEY}&query=${keyword}`;
+
+  if (cache[key] && (Date.now() - cache[key].timestamp < 1000 * 60 * 60 * 24 * 30)) {
+    console.log('cache hit');
+  } else {
+    console.log('cache miss');
+    cache[key] = {};
+    cache[key].timestamp = Date.now();
+    cache[key].data = axios.get(url)
+      .then(response => parseMovie(response.data));
+  }
+  return cache[key].data;
+}
+
+function parseMovie(movieData) {
   try {
-    let movieDataGotten = await axios.get(url,{params});
-    let moviesData = movieDataGotten.data.results;
-    let movieArray = moviesData.map(movie => new Movie(movie));
-    res.send(movieArray);
-  } catch (error) {
-    Promise.resolve().then(() => {
-      throw new Error(error.message);
+    const movieList = movieData.results.map(movie => {
+      return new Movie(movie);
     });
+    return Promise.resolve(movieList);
+  } catch (error) {
+    return Promise.reject(error);
   }
 }
 
@@ -30,4 +40,3 @@ class Movie {
   }
 }
 
-module.exports = getMovies;
